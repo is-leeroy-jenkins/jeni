@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jeni-py"
+version = "0.1.0"
+description = "Gemini-powered Streamlit assistant for chat, multimodal workflows, and document retrieval"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+authors = [{name = "Terry Eppler"}]
+license = "MIT"
+license-files = ["LICENSE.txt"]
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/is-leeroy-jenkins/jeni"
+Documentation = "https://is-leeroy-jenkins.github.io/jeni/"
+Issues = "https://github.com/is-leeroy-jenkins/jeni/issues"
+
+[project.scripts]
+jeni = "jeni.cli:desktop"
+jeni-browser = "jeni.cli:main"
+
+[tool.setuptools]
+packages = ["jeni", "jeni.boogr"]
+package-dir = {jeni = "."}
+include-package-data = false
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements-runtime.txt"]}
+
+[tool.setuptools.package-data]
+jeni = ["resources/**/*.png", "resources/**/*.ico", ".streamlit/config.toml"]
+
+"jeni.boogr" = ["*.ico", "resources/**/*"]

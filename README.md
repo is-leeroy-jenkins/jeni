@@ -3,25 +3,25 @@
 ![](https://github.com/is-leeroy-jenkins/Jeni/blob/main/resources/images/jeni_project.png)
 
 <p align="center">
-  <a href="#-overview">Overview</a> 
+  <a href="#-overview">Overview</a>
   &bull;
   <a href="#-features">Features</a>
   &bull;
   <a href="#-application-modes">Modes</a>
   &bull;
-  <a href="https://github.com/is-leeroy-jenkins/Jeni/blob/main/requirements.txt">Requirements</a> 
+  <a href="https://github.com/is-leeroy-jenkins/Jeni/blob/main/requirements.txt">Requirements</a>
   &bull;
-  <a href="#-api-key-setup">Setup</a> 
+  <a href="#-api-key-setup">Setup</a>
   &bull;
-  <a href="#-installation">Installation</a> 
+  <a href="resources/installation.md">Installation</a>
   &bull;
-  <a href="#-running-the-streamlit-application">Run</a> 
+  <a href="#-running-the-streamlit-application">Run</a>
   &bull;
-  <a href="#%EF%B8%8F-configuration">Configuration</a> 
+  <a href="#%EF%B8%8F-configuration">Configuration</a>
   &bull;
   <a href="#-design-and-architecture">Architecture</a>
   &bull;
-  <a href="#-capabilities">Capabilities</a> 
+  <a href="#-capabilities">Capabilities</a>
   &bull;
 </p>
 
@@ -633,3 +633,16 @@ print(type(audio_bytes))
 
 Jeni is published under the [MIT License](https://github.com/is-leeroy-jenkins/Jeni/blob/main/LICENSE).
 
+
+## PyPI application
+
+```powershell
+python -m pip install jeni-py
+jeni
+```
+
+`jeni` opens the tabless Windows WebView2 window by default.
+`jeni-browser` opens standard browser mode. Python 3.11–3.12 is supported.
+The distribution is `jeni-py`; the import is `jeni`.
+Set `GEMINI_API_KEY` before using provider features. Windows requires WebView2 Runtime.
+See [installation](resources/installation.md) and [publication](resources/pypi-release.md).

@@ -177,3 +177,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 !/venv/
+
+# Application packaging
+build/
+dist/
+dist-installer/
+*.egg-info/
+__pycache__/
