@@ -55,7 +55,10 @@ from pandas import read_csv as CsvReader
 from pandas import read_excel as ExcelReader
 from pydantic import BaseModel
 import re
-import config as cfg
+if __package__ == 'jeni.boogr':
+	from .. import config as cfg
+else:
+	import config as cfg
 import sqlite3
 
 def get_config_bool( name: str, default: bool = False ) -> bool:
