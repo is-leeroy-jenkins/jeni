@@ -6359,7 +6359,6 @@ elif mode == 'Embedding':
 				st.data_editor( df_embedding, use_container_width=True, hide_index=True,
 					key='embedding_vectors' )
 
-
 # ======================================================================================
 # DOCUMENTS MODE
 # ======================================================================================
